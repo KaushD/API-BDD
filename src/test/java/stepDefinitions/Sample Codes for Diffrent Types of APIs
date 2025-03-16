@@ -1,0 +1,47 @@
+@Test
+    public void getAPI() {
+        given()
+        .when()
+                .get("https://fakestoreapi.com/products")
+        .then()
+                .statusCode(200);
+    }
+
+  @Test
+    public void postAPI() {
+        given()
+                .body("")
+                .when()
+                .post()
+                .then()
+                .statusCode(201);
+    }
+
+    @Test
+    public void putAPI() {
+        given()
+                .body("")
+                .when()
+                .put()
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    public void deleteAPI() {
+        given()
+                .body("")
+                .when()
+                .put()
+                .then()
+                .statusCode(200);
+    }
+
+    /*Multiple assertions
+    .then ()
+        .statusCode(200)
+        .body("title",equalTo("foo"))
+        .header("Content-Type",containsString("application/json"));
+     */
+
+
